@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instagram Photo Feed</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+</head>
+
+<body>
+  <div class="container-fluid px-0">
+    <div class="">
+      <!-- Image and text -->
+      <nav class="navbar navbar-light bg-light px-10">
+        <a class="navbar-brand" href="#">
+          <i class="bi bi-instagram"></i> <em>Instagram</em>
+        </a>
+
+        <!-- Justify content right -->
+        <div class="d-grid gap-2 d-flex justify-content-end">
+          <!-- Button trigger modal -->
+          <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Create a new post!
+          </button>
+
+          <!-- Modal -->
+          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+
+                <div class="modal-body">
+                  <form>
+                    <div class="mb-3">
+                      <input type="text" class="form-control" id="recipient-name">
+                    </div>
+                  </form>
+                  <div class="icons">
+                    <button type="button" class="btn btn-outline-secondary"><i class="bi bi-camera-fill"></i></button>
+                    <button type="button" class="btn btn-outline-secondary"><i class="bi bi-geo-alt-fill"></i></button>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                  <button type="button" class="btn btn-primary">Publish</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dropdown -->
+          <div class="dropdown">
+            <button class="btn bg-light dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="bi bi-gear"></i>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Separated link</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <!-- Pills (Nav-Tabs) -->
+    <div class="">
+      <ul class="nav nav-pills my-3 d-flex justify-content-center" id="pills-tab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="pills-gallery-tab" data-bs-toggle="pill" data-bs-target="#pills-gallery" type="button" role="tab" aria-controls="pills-gallery" aria-selected="true"><i class="bi bi-grid"></i></button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="pills-cards-tab" data-bs-toggle="pill" data-bs-target="#pills-cards" type="button" role="tab" aria-controls="pills-cards" aria-selected="false"><i class="bi bi-app"></i></button>
+        </li>
+      </ul>
+
+      <!-- Gallery -->
+      <div class="tab-content" id="pills-tabContent">
+        <div class="tab-pane fade show active" id="pills-gallery" role="tabpanel" aria-labelledby="pills-gallery-tab">
+          <div class="container-fluid">
+            <div class="row  mb-1">
+              <div class="col px-0">
+                <img src="https://loremflickr.com/320/240?random=1" alt="">
+              </div>
+              <div class="col px-1">
+                <img src="https://loremflickr.com/320/240?random=2" alt="">
+              </div>
+              <div class="col px-0">
+                <img src="https://loremflickr.com/320/240?random=3" alt="">
+              </div>
+            </div>
+
+            <div class="row  mb-1">
+              <div class="col px-0">
+                <img src="https://loremflickr.com/320/240?random=4" alt="">
+              </div>
+              <div class="col px-1">
+                <img src="https://loremflickr.com/320/240?random=5" alt="">
+              </div>
+              <div class="col px-0">
+                <img src="https://loremflickr.com/320/240?random=6" alt="">
+              </div>
+            </div>
+
+            <div class="row  mb-1">
+              <div class="col px-0">
+                <img src="https://loremflickr.com/320/240?random=7" alt="">
+              </div>
+              <div class="col px-1">
+                <img src="https://loremflickr.com/320/240?random=8" alt="">
+              </div>
+              <div class="col px-0">
+                <img src="https://loremflickr.com/320/240?random=9" alt="">
+              </div>
+            </div>
+
+            <div class="row  mb-1">
+              <div class="col px-0">
+                <img src="https://loremflickr.com/320/240?random=10" alt="">
+              </div>
+              <div class="col px-1">
+                <img src="https://loremflickr.com/320/240?random=11" alt="">
+              </div>
+              <div class="col px-0">
+                <img src="https://loremflickr.com/320/240?random=12" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cards -->
+        <div class="tab-pane fade" id="pills-cards" role="tabpanel" aria-labelledby="pills-cards-tab">
+
+          <div class="card mx-auto mb-3" style="width: 35rem;">
+            <div class="card-header bg-white d-flex justify-content-between">
+              <h5 class="card-title">My first photo</h5>
+              <p class="card-text"><small class="text-muted">12/21</small></p>
+            </div>
+            <img src="https://loremflickr.com/320/240?random=1" alt="">
+            <div class="card-body">
+
+              <p class="card-text"><strong>25 Likes</strong></p>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                card's content.</p>
+              <div class="d-flex justify-content-between">
+                <div class="d-flex justify-content-start">
+                  <i class="bi bi-heart"></i>
+                  <p class="card-text ms-4"><small class="text-muted">Comments...</small></p>
+                </div>
+                <div>
+                  <i class="bi bi-three-dots-vertical"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card mx-auto mb-3" style="width: 35rem;">
+            <div class="card-header bg-white d-flex justify-content-between">
+              <h5 class="card-title">My second photo</h5>
+              <p class="card-text"><small class="text-muted">12/21</small></p>
+            </div>
+            <img src="https://loremflickr.com/320/240?random=2" alt="">
+            <div class="card-body">
+              <p class="card-text"><strong>25 Likes</strong></p>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                card's content.</p>
+              <div class="d-flex justify-content-between">
+                <div class="d-flex justify-content-start">
+                  <i class="bi bi-heart"></i>
+                  <p class="card-text ms-4"><small class="text-muted">Comments...</small></p>
+                </div>
+                <div>
+                  <i class="bi bi-three-dots-vertical"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card mx-auto mb-3" style="width: 35rem;">
+            <div class="card-header bg-white d-flex justify-content-between">
+              <h5 class="card-title">My third photo</h5>
+              <p class="card-text"><small class="text-muted">12/21</small></p>
+            </div>
+            <img src="https://loremflickr.com/320/240?random=3" alt="">
+            <div class="card-body">
+              <p class="card-text"><strong>25 Likes</strong></p>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                card's content.</p>
+              <div class="d-flex justify-content-between">
+                <div class="d-flex justify-content-start">
+                  <i class="bi bi-heart"></i>
+                  <p class="card-text ms-4"><small class="text-muted">Comments...</small></p>
+                </div>
+                <div>
+                  <i class="bi bi-three-dots-vertical"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card mx-auto mb-3" style="width: 35rem;">
+            <div class="card-header bg-white d-flex justify-content-between">
+              <h5 class="card-title">My fourth photo</h5>
+              <p class="card-text"><small class="text-muted">12/21</small></p>
+            </div>
+            <img src="https://loremflickr.com/320/240?random=4" alt="">
+            <div class="card-body">
+              <p class="card-text"><strong>25 Likes</strong></p>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                card's content.</p>
+              <div class="d-flex justify-content-between">
+                <div class="d-flex justify-content-start">
+                  <i class="bi bi-heart"></i>
+                  <p class="card-text ms-4"><small class="text-muted">Comments...</small></p>
+                </div>
+                <div>
+                  <i class="bi bi-three-dots-vertical"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card mx-auto mb-3" style="width: 35rem;">
+            <div class="card-header bg-white d-flex justify-content-between">
+              <h5 class="card-title">My fith photo</h5>
+              <p class="card-text"><small class="text-muted">12/21</small></p>
+            </div>
+            <img src="https://loremflickr.com/320/240?random=5" alt="">
+            <div class="card-body">
+              <p class="card-text"><strong>25 Likes</strong></p>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                card's content.</p>
+              <div class="d-flex justify-content-between">
+                <div class="d-flex justify-content-start">
+                  <i class="bi bi-heart"></i>
+                  <p class="card-text ms-4"><small class="text-muted">Comments...</small></p>
+                </div>
+                <div>
+                  <i class="bi bi-three-dots-vertical"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card mx-auto mb-3" style="width: 35rem;">
+            <div class="card-header bg-white d-flex justify-content-between">
+              <h5 class="card-title">My sixth photo</h5>
+              <p class="card-text"><small class="text-muted">12/21</small></p>
+            </div>
+            <img src="https://loremflickr.com/320/240?random=6" alt="">
+            <div class="card-body">
+              <p class="card-text"><strong>25 Likes</strong></p>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                card's content.</p>
+              <div class="d-flex justify-content-between">
+                <div class="d-flex justify-content-start">
+                  <i class="bi bi-heart"></i>
+                  <p class="card-text ms-4"><small class="text-muted">Comments...</small></p>
+                </div>
+                <div>
+                  <i class="bi bi-three-dots-vertical"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+</body>
+
+</html>
